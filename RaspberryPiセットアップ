@@ -1,10 +1,6 @@
+Raspberry Pi側のNode.js・pi-blaster・WebSocketのセットアップ
 
-
-Raspberry Pi側のNode.js・pi-blaster・WebSocketのセットアップ、この手順でやってます。
-変なところあれば、指摘ください。
-（こちらでの動作確認はOKになりましたので、たぶん問題ないとは思う…）
-
-　Node.jsのインストール
+Node.jsのインストール
 　　以下の手順を実行してください。
 　　nodebrewのインストール
 　　　インストールコマンド： curl -L git.io/nodebrew | perl - startup
@@ -23,7 +19,7 @@ Raspberry Pi側のNode.js・pi-blaster・WebSocketのセットアップ、この
 　　コマンドの中から別のコマンドを呼び出しをしているため、呼び出せるようにする
 　　　コマンド： sudo ln -s /home/pi/.nodebrew/current/bin/node /usr/bin/node
 　　　 sudo ln -s /home/pi/.nodebrew/current/bin/npm /usr/bin/npm
-　pi-blasterとpi-blaster.jsのインストール
+pi-blasterとpi-blaster.jsのインストール
 　　コマンド： sudo apt-get install autoconf
 　　 git clone https://github.com/sarfata/pi-blaster.git
 　　 cd pi-blaster
@@ -32,7 +28,7 @@ Raspberry Pi側のNode.js・pi-blaster・WebSocketのセットアップ、この
 　　 make
 　　 sudo make install
 　　 npm install -g pi-blaster.js
-　WebSocketのインストール
+WebSocketのインストール
 　　コマンド： npm config set registry http://registry.npmjs.org/
 　　 npm install -g websocket
 　　インストール先ディレクトリを実行環境で利用可能にするために、.bashrcの末尾に以下内容を記入してください。
