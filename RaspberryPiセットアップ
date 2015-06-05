@@ -1,6 +1,27 @@
-Raspberry Pi側のNode.js・pi-blaster・WebSocketのセットアップ、この手順でやってます。
+Raspberry Pi本体のセットアップ＆アップデートと、
+Raspberry Pi側のNode.js・pi-blaster・WebSocketのセットアップ
+
+この手順でやってます。
 変なところあれば、指摘ください。
 （こちらでの動作確認はOKになりましたので、たぶん問題ないとは思う…）
+
+Raspbianのインストール
+モニター無しで、PCをコンソールとして起動するため、
+NOOBSのセットアップではなく、Raspbian(Debian Wheezy)をセットアップします。
+SDカード作成の手順：
+以下URLを参照。
+https://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
+PCとRaspberry Piを接続します。
+以下URLを参照：
+http://qiita.com/sh1k1ya/items/dfd096fabff601f5f6f4
+
+有線LAN / 無線LANへの接続
+有線LANの場合：
+Raspberry PiのLANポートと、インターネットに接続可能なルーターを、LANケーブルでつなぐ。
+無線LANの場合：
+以下URLを参照
+http://qiita.com/sh1k1ya/items/fabc9accae28a0f0a7e3
 
 Node.jsのインストール
 コマンド：
@@ -15,7 +36,7 @@ export NODEBREW_ROOT=$HOME/.nodebrew
 コマンド：
 su reboot
 
-今後の作業をスムーズにするためにnodebrewをインストールする
+今後の作業をスムーズにするためにnodebrewをインストールします。
 コマンド：
 nodebrew install-binary v0.10.28
 nodebrew use v0.10.28
