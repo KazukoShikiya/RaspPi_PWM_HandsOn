@@ -25,7 +25,7 @@ http://qiita.com/sh1k1ya/items/fabc9accae28a0f0a7e3
 
 Node.jsのインストール
 コマンド：
-curl -L git.io/nodebrew | perl - startup
+curl -L git.io/nodebrew | perl - setup
 
 インストール先ディレクトリを実行環境で利用可能にするために、.bashrcの末尾に以下内容を記入してください。
 記入内容：
