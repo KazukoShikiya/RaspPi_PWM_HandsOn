@@ -23,6 +23,13 @@ Raspberry PiのLANポートと、インターネットに接続可能なルー�
 以下URLを参照
 http://qiita.com/sh1k1ya/items/fabc9accae28a0f0a7e3
 
+RaspbianのOSアップデート
+sudo apt-get update
+sudo apt-get upgrde
+
+Raspbianのファームウェアアップデート（不必要かも…）
+sudo rpi-update
+
 Node.jsのインストール
 コマンド：
 curl -L git.io/nodebrew | perl - setup
@@ -76,3 +83,7 @@ export NODE_PATH=/home/pi/.nodebrew/current/lib/node_modules/
 su reboot
 
 作業完了
+
+セットアップ作業をRaspberry Pi B / B+ で行い、実行をRaspberry Pi 2で行う場合は、以下コマンドを最後に実行しておく。
+sudo dist-update
+(このコマンド以降、利用はRaspberry Pi 2で行う)
