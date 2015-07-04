@@ -67,6 +67,7 @@ cd pi-blaster
 ./configure
 make
 sudo make install
+cd ..
 npm install -g pi-blaster.js
 
 WebSocketのインストール
