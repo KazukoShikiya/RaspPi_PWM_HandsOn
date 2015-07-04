@@ -41,7 +41,7 @@ export NODEBREW_ROOT=$HOME/.nodebrew
 
 .bashrcを反映するためRaspberry Piの再起動をします。
 コマンド：
-su reboot
+sudo reboot
 
 今後の作業をスムーズにするためにnodebrewをインストールします。
 コマンド：
@@ -81,7 +81,7 @@ export NODE_PATH=/home/pi/.nodebrew/current/lib/node_modules/
 
 .bashrcを反映するためRaspberry Piの再起動をします。
 コマンド：
-su reboot
+sudo reboot
 
 作業完了
 
