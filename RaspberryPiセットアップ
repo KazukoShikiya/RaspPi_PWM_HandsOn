@@ -25,7 +25,7 @@ http://qiita.com/sh1k1ya/items/fabc9accae28a0f0a7e3
 
 RaspbianのOSアップデート
 sudo apt-get update
-sudo apt-get upgrde
+sudo apt-get pugrade
 
 Raspbianのファームウェアアップデート（不必要かも…）
 sudo rpi-update
