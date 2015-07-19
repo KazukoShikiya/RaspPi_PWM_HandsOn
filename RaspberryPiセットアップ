@@ -16,6 +16,11 @@ PCとRaspberry Piを接続します。
 以下URLを参照：
 http://qiita.com/sh1k1ya/items/dfd096fabff601f5f6f4
 
+Raspbianの初期設定
+Raspbianにログインした直後にSDカードの容量をmaxに使えるようにセットアップする。
+以下URLを参照：
+http://yamaryu0508.hatenablog.com/entry/2015/02/03/070000
+
 有線LAN / 無線LANへの接続
 有線LANの場合：
 Raspberry PiのLANポートと、インターネットに接続可能なルーターを、LANケーブルでつなぐ。
