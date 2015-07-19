@@ -35,7 +35,7 @@ sudo apt-get pugrade
 Raspbianのファームウェアアップデート（不必要かも…）
 sudo rpi-update
 
-Node.jsのインストール
+Node.jsのインストール　#### 現在修正対象：Raspberry Pi 2の場合、このやりかたは利用できない可能性がある。
 コマンド：
 curl -L git.io/nodebrew | perl - setup
 
