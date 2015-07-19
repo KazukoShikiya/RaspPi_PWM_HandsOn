@@ -35,7 +35,7 @@ sudo apt-get pugrade
 Raspbianのファームウェアアップデート（不必要かも…）
 sudo rpi-update
 
-Node.jsのインストール　#### 現在修正対象：Raspberry Pi 2の場合、このやりかたは利用できない可能性がある。
+Node.jsのインストール　#### 現在修正対象ここから：Raspberry Pi 2の場合、このやりかたは利用できない可能性がある。
 コマンド：
 curl -L git.io/nodebrew | perl - setup
 
@@ -62,6 +62,8 @@ npm -v
 コマンド：
 sudo ln -s /home/pi/.nodebrew/current/bin/node /usr/bin/node
 sudo ln -s /home/pi/.nodebrew/current/bin/npm /usr/bin/npm
+
+#### 現在修正対象ここまで：Raspberry Pi 2の場合、このやりかたは利用できない可能性がある。
 
 pi-blasterとpi-blaster.jsのインストール
 コマンド：
