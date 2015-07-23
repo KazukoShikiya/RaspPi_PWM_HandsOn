@@ -83,8 +83,8 @@ npm -v
 /user/local/bin/node
 /user/local/bin/npm
 になっている
-
 ##### ここまでRaspberry Pi 2の場合の方法（案）
+
 pi-blasterとpi-blaster.jsのインストール
 コマンド：
 sudo apt-get install autoconf
@@ -95,13 +95,14 @@ cd pi-blaster
 make
 sudo make install
 cd ..
-npm install -g pi-blaster.js
+npm install -g pi-blaster.js ### RPi2のやりかたではsudo付ける
 
 WebSocketのインストール
 コマンド：
 npm config set registry http://registry.npmjs.org/
-npm install -g websocket
+npm install -g websocket　 ### RPi2のやりかたではsudo付ける
 
+ ### RPi2のやりかたでは飛ばす
 インストール先ディレクトリを実行環境で利用可能にするために、.bashrcの末尾に以下内容を記入してください。
 記入内容：
 export NODE_PATH=/home/pi/.nodebrew/current/lib/node_modules/
@@ -112,6 +113,7 @@ sudo reboot
 
 作業完了
 
+### nodebrewのところの問題もあるので、この方法は推奨しないほうがよいかも？？
 セットアップ作業をRaspberry Pi B / B+ で行い、実行をRaspberry Pi 2で行う場合は、以下コマンドを最後に実行しておく。
 sudo dist-update
 (このコマンド以降、利用はRaspberry Pi 2で行う)
