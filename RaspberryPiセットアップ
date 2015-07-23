@@ -79,6 +79,11 @@ sudo make install
 node -v
 npm -v
 
+インストール先は、
+/user/local/bin/node
+/user/local/bin/npm
+になっている
+
 ##### ここまでRaspberry Pi 2の場合の方法（案）
 pi-blasterとpi-blaster.jsのインストール
 コマンド：
