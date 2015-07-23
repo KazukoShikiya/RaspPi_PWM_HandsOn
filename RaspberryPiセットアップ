@@ -64,7 +64,22 @@ sudo ln -s /home/pi/.nodebrew/current/bin/node /usr/bin/node
 sudo ln -s /home/pi/.nodebrew/current/bin/npm /usr/bin/npm
 
 #### 現在修正対象ここまで：Raspberry Pi 2の場合、このやりかたは利用できない可能性がある。
+##### Raspberry Pi 2の場合の方法（案）
+nodebrewは使わず、
+Node.jsは、ソースコードからビルドする
+wget http://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz
+tar xvf node-v0.12.7.tar.gz
+cd node-v0.12.7
+./configure
+make
+sudo make install
 
+インストールできたか確認のため、バージョン表示してみる
+コマンド：
+node -v
+npm -v
+
+##### ここまでRaspberry Pi 2の場合の方法（案）
 pi-blasterとpi-blaster.jsのインストール
 コマンド：
 sudo apt-get install autoconf
