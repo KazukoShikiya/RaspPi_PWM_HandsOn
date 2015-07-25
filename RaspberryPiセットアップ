@@ -30,12 +30,12 @@ http://qiita.com/sh1k1ya/items/fabc9accae28a0f0a7e3
 
 RaspbianのOSアップデート
 sudo apt-get update
-sudo apt-get pugrade
+sudo apt-get upgrade
 
 Raspbianのファームウェアアップデート（不必要かも…）
 sudo rpi-update
 
-Node.jsのインストール　#### 現在修正対象ここから：Raspberry Pi 2の場合、このやりかたは利用できない可能性がある。
+Node.jsのインストール
 コマンド：
 curl -L git.io/nodebrew | perl - setup
 
@@ -44,13 +44,15 @@ curl -L git.io/nodebrew | perl - setup
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export NODEBREW_ROOT=$HOME/.nodebrew
 
-.bashrcを反映するためRaspberry Piの再起動をします。
+.bashrcを反映するため読み込み直す
 コマンド：
-sudo reboot
+source .bashrc
 
 今後の作業をスムーズにするためにnodebrewをインストールします。
 コマンド：
-nodebrew install-binary v0.10.28
+nodebrew install-binary v0.10.28 # B , B+ の場合
+nodebrew install v0.10.28 # 2 の場合
+
 nodebrew use v0.10.28
 
 インストールできたか確認のため、バージョン表示してみる
@@ -63,28 +65,6 @@ npm -v
 sudo ln -s /home/pi/.nodebrew/current/bin/node /usr/bin/node
 sudo ln -s /home/pi/.nodebrew/current/bin/npm /usr/bin/npm
 
-#### 現在修正対象ここまで：Raspberry Pi 2の場合、このやりかたは利用できない可能性がある。
-##### Raspberry Pi 2の場合の方法（案）
-nodebrewは使わず、
-Node.jsは、ソースコードからビルドする
-wget http://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz
-tar xvf node-v0.12.7.tar.gz
-cd node-v0.12.7
-./configure
-make
-sudo make install
-
-インストールできたか確認のため、バージョン表示してみる
-コマンド：
-node -v
-npm -v
-
-インストール先は、
-/user/local/bin/node
-/user/local/bin/npm
-になっている
-##### ここまでRaspberry Pi 2の場合の方法（案）
-
 pi-blasterとpi-blaster.jsのインストール
 コマンド：
 sudo apt-get install autoconf
@@ -95,25 +75,23 @@ cd pi-blaster
 make
 sudo make install
 cd ..
-npm install -g pi-blaster.js ### RPi2のやりかたではsudo付ける
+npm install -g pi-blaster.js
 
 WebSocketのインストール
 コマンド：
 npm config set registry http://registry.npmjs.org/
-npm install -g websocket　 ### RPi2のやりかたではsudo付ける
+npm install -g websocket
 
- ### RPi2のやりかたでは飛ばす
 インストール先ディレクトリを実行環境で利用可能にするために、.bashrcの末尾に以下内容を記入してください。
 記入内容：
 export NODE_PATH=/home/pi/.nodebrew/current/lib/node_modules/
 
-.bashrcを反映するためRaspberry Piの再起動をします。
+.bashrcを反映するため読み込み直す
 コマンド：
-sudo reboot
+source .bashrc
 
 作業完了
 
-### nodebrewのところの問題もあるので、この方法は推奨しないほうがよいかも？？
 セットアップ作業をRaspberry Pi B / B+ で行い、実行をRaspberry Pi 2で行う場合は、以下コマンドを最後に実行しておく。
 sudo dist-update
 (このコマンド以降、利用はRaspberry Pi 2で行う)
