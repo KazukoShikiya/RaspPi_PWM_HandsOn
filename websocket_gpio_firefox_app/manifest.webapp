@@ -1,0 +1,13 @@
+{
+  "name": "GPIO",
+  "description": "Web Socket GPIO",
+  "type": "web",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "masap",
+    "url": "https://github.com/masap/gaia"
+  },
+  "icons": {
+    "128": "/style/icons/html5.png"
+  }
+}
