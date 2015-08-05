@@ -1,9 +1,7 @@
 Raspberry Pi本体のセットアップ＆アップデートと、
 Raspberry Pi側のNode.js・pi-blaster・WebSocketのセットアップ
 
-この手順でやってます。
-変なところあれば、指摘ください。
-（こちらでの動作確認はOKになりましたので、たぶん問題ないとは思う…）
+ハンズオン環境の作成は、この手順でやってます。
 
 Raspbianのインストール
 モニター無しで、PCをコンソールとして起動するため、
@@ -91,7 +89,3 @@ export NODE_PATH=/home/pi/.nodebrew/current/lib/node_modules/
 source .bashrc
 
 作業完了
-
-セットアップ作業をRaspberry Pi B / B+ で行い、実行をRaspberry Pi 2で行う場合は、以下コマンドを最後に実行しておく。
-sudo dist-update
-(このコマンド以降、利用はRaspberry Pi 2で行う)
